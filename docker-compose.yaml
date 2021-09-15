@@ -1,0 +1,12 @@
+services:
+  client:
+    container_name: ms_catalog
+    build:
+      context: ./
+      dockerfile: Dockerfile-catalog
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/app
+    env_file:
+      - ./.env
